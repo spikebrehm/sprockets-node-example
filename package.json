@@ -1,0 +1,34 @@
+{
+  "name": "sprockets-node-example",
+  "version": "1.0.0",
+  "description": "An example Rails app showing how to integrate Sprockets with a Node asset pipeline.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spikebrehm/sprockets-node-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spikebrehm/sprockets-node-example/issues"
+  },
+  "homepage": "https://github.com/spikebrehm/sprockets-node-example",
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "backbone.localstorage": "^1.1.16",
+    "handlebars": "^2.0.0",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "concat-stream": "^1.4.7",
+    "hbsfy": "^2.2.1",
+    "yargs": "^2.1.1"
+  }
+}
