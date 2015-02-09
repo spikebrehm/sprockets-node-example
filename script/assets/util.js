@@ -12,7 +12,8 @@ function getBrowserifyBundler(bundlePath) {
     debug: isDevelopment,
     extensions: ['.hbs'],
   })
-  .transform('hbsfy');
+  .transform('hbsfy')
+  .transform('6to5ify');
 
   return bundler;
 }

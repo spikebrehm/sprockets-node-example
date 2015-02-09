@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/spikebrehm/sprockets-node-example",
   "dependencies": {
+    "6to5ify": "^4.1.0",
     "backbone": "^1.1.2",
     "backbone.localstorage": "^1.1.16",
     "handlebars": "^2.0.0",
