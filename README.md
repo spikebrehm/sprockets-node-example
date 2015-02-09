@@ -31,5 +31,14 @@ We've implemented two different versions of the TodoMVC Backbone app:
 1. The default TodoMVC code, using Sprockets to manage the JavaScript assets (`http://localhost:3000`).
 2. The TodoMVC code refactored to use CommonJS to manage the JavaScript assets (`http://localhost:3000/commonjs`).
 
-Check out the `lib/browserify_template.rb` file and `script/assets/*.js` files for
-the good stuff.
+## How it works
+
+### Tilt Template
+We built a custom [Tilt](https://github.com/rtomayko/tilt) template to handle the file extension `.bundle.js`, which we'll use to indicate CommonJS bundles. We've called our Tilt template `BrowserifyTemplate`, and it lives at [`lib/browserify_template.rb`](https://github.com/spikebrehm/sprockets-node-example/blob/master/lib/browserify_template.rb).
+
+### Browserify commandline script
+The `BrowserifyTemplate` shells out on the commandline to a Node.js script that takes the path to a `.bundle.js` file, calls Browserify, and returns the output as STDOUT.  See [`script/assets/tasks/bundle.js`](https://github.com/spikebrehm/sprockets-node-example/blob/master/script/assets/tasks/bundle.js).
+
+    $ ./script/assets/tasks/bundle.js --path app/assets/javascripts/commonjs/manifest.bundle.js
+
+`BrowserifyTemplate` captures the STDOUT output and hands it back to Sprockets to manage.
