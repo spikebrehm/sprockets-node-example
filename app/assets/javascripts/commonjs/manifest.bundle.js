@@ -1,4 +1,5 @@
-var app = require('./app');
+var $ = require('jquery'),
+    app = require('./app');
 
 // Go!
 $(function() {

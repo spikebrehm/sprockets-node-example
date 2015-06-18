@@ -20,10 +20,10 @@ class BrowserifyTemplate < Tilt::Template
       end
 
       # Transform the file with Browserify.
-      @output ||= bundler('bundle', scope.pathname)
+      @output = bundler('bundle', scope.pathname)
     end
 
-    @output
+    @output || ''
   end
 
 protected
