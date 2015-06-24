@@ -32,7 +32,7 @@ var app = app || {};
 			this.$input = this.$('#new-todo');
 			this.$footer = this.$('#footer');
 			this.$main = this.$('#main');
-			this.$list = $('#todo-list');
+			this.$list = this.$('#todo-list');
 
 			this.listenTo(app.todos, 'add', this.addOne);
 			this.listenTo(app.todos, 'reset', this.addAll);

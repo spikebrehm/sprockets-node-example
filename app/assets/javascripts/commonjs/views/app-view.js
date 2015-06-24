@@ -39,7 +39,7 @@ module.exports = Backbone.View.extend({
     this.$input = this.$('#new-todo');
     this.$footer = this.$('#footer');
     this.$main = this.$('#main');
-    this.$list = $('#todo-list');
+    this.$list = this.$('#todo-list');
 
     this.listenTo(this.todos, 'add', this.addOne);
     this.listenTo(this.todos, 'reset', this.addAll);
